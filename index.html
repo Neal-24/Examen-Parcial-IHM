@@ -1,11 +1,405 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Adaptandonos al COVID19</title>
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/plugin/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="css/plugin/jquery.jdSlider.css">  <!--Aqui viene el pano-->
+    <link rel="stylesheet" href="css/plugin/fullcalendar.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="habitaciones.css">
+
+    <!-- Bootstrap CSS Aquí llama a las hojas de estilo de bootstrap, pero lo hace de un servidor externo-->
+
 </head>
+
 <body>
+
+    <!--Header-->
     
+    <header class="container-fluid p-0 bg-white">
+        <div class="container p-0">
+            <div class="grid-container py-2">
+
+                <!--Logo-->
+                <div class="grid-item ">
+
+                    <a href="index.html">
+                        <img src="img/Logo/upao_logo.jpg" alt="logotipo" class="img-fluid">
+                    </a>
+
+                </div>
+
+                <div class="grid-item d-none d-lg-block"></div>
+
+                <!--Campana y reserva-->
+                <div class="grid-item d-none d-lg-block bloqueReservas">
+
+                    <!--Formulario de Reservas-->
+                    
+                    <div>
+                           
+                    </div>
+
+                </div>
+
+                <div class="grid-item d-none d-lg-block mt-2">
+
+                </div>
+
+                <!-- Selección de idioma -->
+                <div class="grid-item d-none d-lg-block mt-1 idiomas">
+
+                </div>
+
+                <!-- Menú Hamburguesa -->
+                <div class="grid-item mt-1 mt-sm-3 mt-md-4 mt-lg-2 botonMenu">
+                    <i class="fas fa-bars lead" title="Barra de Navegación"> </i>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!--Menú-->
+    
+    <nav class="menu container-fluid p-0">
+
+        <ul class="nav nav-justified py-2">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#planes"> Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#contagio"> Carreras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#comentarios"> Extensión del Covid </a>
+            </li>
+            
+           
+            <li class="nav-item">
+                <ul class="my-2 py-1">
+                    <li>
+                        <a href="https://www.facebook.com/neisserarilson.morenosanchez.9/" target="_blank">
+                            <i class="fab fa-facebook-f text-white float-left mx-2" title="Facebook"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-twitter text-white float-left mx-2" title="Twitter"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <i class="fab fa-youtube text-white float-left mx-2" title="Youtube"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/neissercode.21/?hl=es-la" target="_blank">
+                            <i class="fab fa-instagram text-white float-left mx-2" title="Instragram"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+            <!-------------------Carrusel-------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/Banner/banner1.jpg" alt="primero slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="img/Banner/banner2.jpg" alt="segundo slide">
+                      </div>
+                     <div class="carousel-item">
+                        <img class="d-block w-100" src="img/concierto.jpg" alt="tercero slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+             </div>
+
+            <div class="col-4">
+
+                <form>
+                    <div class="form-group">
+                      <label for="email">Correo: </label>
+                      <input type="email" class="form-control" placeholder="Correo" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Contraseña:</label>
+                      <input type="password" class="form-control" placeholder="Contraseña" id="pwd">
+                    </div>
+                    <div class="form-group form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Recuerdame
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                  </form>
+                  <p>Olvidaste tu contraseña?</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Formas de contagio-->
+    <div class="habitaciones container-fluid bg-light" id="contagio">
+        
+        <div class="container">
+            
+            <h2 class="pt-4 text-center">FORMAS DE CONTAGIO ASOCIADO A SU NIVEL DE RIESGO</h2>
+            
+            <div class="row p-4 text-center">
+                
+                <div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
+                   
+                    <a href="./bajo.html">
+
+                        <figure class="text-center">
+
+                            <img src="img/parque.jpg" class="img-fluid" width="100%">
+
+                            <p class="small  py-4 px-2 px-lg-0 mb-0">Situaciones de vida común más habituales y su riesgo potencial de transmisión</p>
+                        
+                            <h5 class="py-3 text-gray-dark border">Ver Detalles <i class="fas
+                                fa-chevron-right ml-2"></i></h5>
+
+                                <h1 class="text-white p-2 m-5 mx-auto w-50 lead" style="background: #847c2f">BAJO</h1>
+
+                        </figure>
+
+                    </a>
+                
+                </div>
+                
+                <div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
+                   
+                    <a href="medio.html">
+
+                        <figure class="text-center">
+
+                            <img src="img/restaurante.jpg" class="img-fluid" width="100%">
+
+                            <p class="small  py-4 px-2 px-lg-0 mb-0">Situaciones de vida común más habituales y su riesgo potencial de transmisión</p>
+                        
+                            <h5 class="py-3 text-gray-dark border">Ver Detalles <i class="fas
+                                fa-chevron-right ml-2"></i></h5>
+
+                                <h1 class="text-white p-2 m-5 mx-auto w-50 lead" style="background:#197DB1">MEDIO</h1>
+
+                        </figure>
+
+                    </a>
+               
+                </div>
+               
+                <div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
+                    
+                    
+                    <a href="alto.html">
+
+                        <figure class="text-center">
+
+                            <img src="img/concierto.jpeg" class="img-fluid" width="100%">
+
+                            <p class="small  py-4 px-2 px-lg-0 mb-0">Situaciones de vida común más habituales y su riesgo potencial de transmisión</p>
+                        
+                            <h5 class="py-3 text-gray-dark border">Ver Detalles <i class="fas
+                                fa-chevron-right ml-2"></i></h5>
+
+                                <h1 class="text-white p-2 m-5 mx-auto w-50 lead" style="background: #2F7D84">ALTO</h1>
+
+                        </figure>
+
+                    </a>
+               
+                </div>
+           
+            </div>
+       
+        </div>
+    </div>
+    
+    <br><br><br>
+
+    <!--COMENTARIOS-->
+
+    <div class="recorridoPueblo container-fluid bg-white pb-5" id="comentarios">
+        <div class="container">
+            <h1 class="pt-5 text-center"> COMO SE EXTIENDE EL COVID-19 </h1>
+            <div class="jd-slider slidePueblo">
+                <div class="slide-inner">
+                    <ul class="slide-area">
+                        <li>
+                            <div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+                                <div class="grid-item"> 
+                                    <img src="img/doc1.jpg" class="img-fluid" width="100%">
+                                 </div>
+                             <div class="grid-item">
+                                <h4 class="mt-4 mb-0 my-lg-2"> El virus se propaga fácilmente entre las personas.</h4>
+                                <p class="small p-3"> Entre personas que están en contacto cercano entre sí (dentro de unos 6 pies). 
+                                    A través de gotas respiratorias producidas cuando una persona infectada tose, estornuda o habla.
+                                </p>
+                             </div>
+                                <div class="grid-item d-none d-lg-block">
+                                    <img src="img/estornudo.jpg" class="img-fluid" width="100%">
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+                                <div class="grid-item"> 
+                                    <img src="img/doc2.jpg" class="img-fluid" width="100%">
+                                 </div>
+                             <div class="grid-item">
+                                <h4 class="mt-4 mb-0 my-lg-2">El virus de propaga de otras maneras</h4>
+                                <p class="small p-3">Una persona puede contraer COVID-19 al tocar una superficie u objeto que tiene el virus y luego tocarse la boca, la nariz o posiblemente los ojos. Un ejemplo 
+                                    de esto es en el microbus, una persona puede dejar el virus en los pasamanos. </p>
+                             </div>
+                                <div class="grid-item d-none d-lg-block">
+                                    <img src="img/transporte.jpg" class="img-fluid" width="100%">
+                                </div>
+                            </div>
+                        </li> 
+
+                        <li>
+                            <div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+                                <div class="grid-item"> 
+                                    <img src="img/doc3.jpeg" class="img-fluid" width="100%">
+                                 </div>
+                             <div class="grid-item">
+                                <h4 class="mt-4 mb-0 my-lg-2">Propagación entre animales y personas</h4>
+                                <p class="small p-3">Parece que el virus que causa COVID-19 puede propagarse de personas a animales en algunas situaciones. Los CDC conocen que un pequeño número de mascotas en todo el mundo, incluidos gatos y perros, están infectadas con el virus que causa COVID-19.</p>
+                             </div>
+                                <div class="grid-item d-none d-lg-block">
+                                    <img src="img/animales.jpg" class="img-fluid" width="100%">
+                                </div>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+                <a class="d-none d-md-block prev" href="#">
+                    <i class="fas fa-angle-left fa-2x" style="color: #3E92BD"></i>
+                </a>
+
+                <a class="d-none d-md-block next" href="#">
+                    <i class="fas fa-angle-right fa-2x" style="color: #3E92BD" ></i>
+                </a>
+
+                <div class="controller">
+                    <div class="indicate-area"> </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- Footer -->
+
+    <footer class="container-fluid p-0">
+        <div class="grid-container">
+            <div class="grid-item d-none d-lg-block pt-2"> </div>
+            <div class="grid-item d-none d-lg-block pt-2"> 
+                <p> © Hecho por Neisser Sánchez | Visita mi <a href="https://github.com/NeisserMS">GitHub</a> </p>
+            </div>
+            <div class="grid-item pt-2"> 
+
+                <ul class="py-1">
+
+                    <li>
+                        <a href="https://www.facebook.com/neisserarilson.morenosanchez.9/" target="_blank"> <i class="fab fa-facebook-f lead text-white float-left mx-3" title="Facebook
+                            "></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank"> <i class="fab fa-twitter lead text-white float-left mx-3" title="Twitter"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC0czkwt1PdL6SkjIvuuiusQ?view_as=subscriber" target="_blank"> <i class="fab fa-youtube lead text-white float-left mx-3" title="Youtube"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/neissercode.21/?hl=es-la" target="_blank"> <i class="fab fa-instagram lead text-white float-left mx-3" title="Instagram"></i></a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!--Redes Móviles-->
+
+    <ul class="redesMovil p-2 nav nav-justified">
+
+        <li class="nav-item">
+            <a href="https://www.facebook.com/neisserarilson.morenosanchez.9/" target="_blank"> <i class="fab fa-facebook-f lead text-white float-left mx-3" title="Facebook"></i></a>
+        </li>
+
+        <li class="nav-item">
+            <a href="#" target="_blank"> <i class="fab fa-twitter lead text-white float-left mx-3" title="Twitter"></i></a>
+        </li>
+
+        <li class="nav-item">
+            <a href="https://www.youtube.com/" target="_blank"> <i class="fab fa-youtube lead text-white float-left mx-3" title="Youtube"></i></a>
+        </li>
+
+        <li class="nav-item">
+            <a href="https://www.instagram.com/neissercode.21/?hl=es-la" target="_blank"> <i class="fab fa-instagram lead text-white float-left mx-3" title="Instragram"></i></a>
+        </li>
+
+    </ul>
+
+
+    
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="js/jquery-3.4.1.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugin/bootstrap-datepicker.min.js"> </script>
+    <script src="js/plugin/jquery.easing.js"> </script>
+    <script src="js/plugin/jquery.scrollUp.js"> </script>
+    <script src="js/plugin/jquery.jdSlider-latest.js"></script>
+    <script src="js/plugin/jquery.pano.js"></script>
+    <script src="js/plugin/moment.js"></script>
+    <script src="js/plugin/fullcalendar.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
