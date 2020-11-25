@@ -370,17 +370,6 @@ nav select {
 
 /* ================ */
 
-/* main content */
-
-#maincontent {
-	z-index:1000;
-	margin-top:0px;
-}
-.contenedor-imagen{
-	margin-bottom: 40px;
-	max-height: 180px;
-	overflow: hidden;
-}
 /* intro */
 
 section#intro{
@@ -2400,54 +2389,3 @@ section#subintro{
 
 }
 
-@media (max-width: 480px) {
-
-    nav select {
-      display: inline-block;
-	  width:85%;
-	  float:none;
-	  margin:20px;
-	  color:#111;
-	  line-height:30px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-		font-size:14px;
-	}
-
-	#sequence {
-		height: 250px;
-	}
-
-	.features {
-		margin-bottom:30px;
-	}
-
-	#sequence .info  {
-		width:100%;
-	}
-
-	#sequence .info p {
-		display:none;
-	}
-
-	#sequence .info a {
-		font-size:12px;
-	}
-
-	.verybottom {
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-left: -20px;
-		margin-right: -20px;
-	}
-
-	.verybottom p {
-		text-align:center;
-	}
-
-	.home-posts .post-image {
-		margin-top:20px;
-	}
-
-}
